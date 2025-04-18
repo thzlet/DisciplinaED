@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 float media(int n, float* v); /// prototipo da funçao media
+// float variancia(int n, float* v);
 
 int main(void) {
     int tamanho;
@@ -41,3 +42,12 @@ float media(int n, float* v) { // função que calcula media
     }
     return soma / n;
 }
+/*
+float variancia(int n, float* v) {
+    float m = media(n, v);
+    float soma = 0;
+    for (int i = 0; i < n; i++) {
+        soma += (v[i] - m) * (v[i] - m);
+    }
+    return soma / n;
+} */
