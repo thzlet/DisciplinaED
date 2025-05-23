@@ -11,7 +11,7 @@ typedef struct ponto Ponto;
 
 // protótipos das funções
 Ponto* criar_ponto();
-void ler_ponto(Ponto* p); // ❗ Correção: faltava o ponto e vírgula no final
+void ler_ponto(Ponto* p); 
 void imprime_ponto(Ponto* p);
 
 int main(void) {
@@ -19,7 +19,7 @@ int main(void) {
     Ponto* p2 = criar_ponto();
 
     ler_ponto(p1);
-    imprime_ponto(p1); // ❗ Correção: estava imprimindo p2 sem ler, deve ser p1 aqui
+    imprime_ponto(p1); 
 
     ler_ponto(p2);
     imprime_ponto(p2);
@@ -29,7 +29,6 @@ int main(void) {
     return 0;
 }
 
-// Criação de ponto dinamicamente
 Ponto* criar_ponto() {
     Ponto* p = (Ponto*)malloc(sizeof(Ponto));
     if (!p) {
@@ -45,5 +44,5 @@ void ler_ponto(Ponto* p) {
 }
 
 void imprime_ponto(Ponto* p) {
-    printf("O ponto fornecido foi: (%.2f, %.2f)\n", p->x, p->y); // ❗ vírgula adicionada para melhor formatação
+    printf("O ponto fornecido foi: (%.2f, %.2f)\n", p->x, p->y); 
 }
